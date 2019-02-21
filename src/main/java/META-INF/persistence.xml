@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="achi" transaction-type="JTA"><jta-data-source>java:jboss/datasources/achi</jta-data-source>
+		<properties>
+			<!--<property name="hibernate.dialect"
+				value="org.hibernate.spatial.dialect.mysql.MySQLSpatial5InnoDBDialect" />-->
+			<!--<property name="hibernate.default_batch_fetch_size" value="50" /> -->
+			<!-- <property name="hibernate.show_sql" value="true" />
+			<property name="org.hibernate.type" value="true" /> -->
+			<!--property name="hibernate.jdbc.batch_size" value="50" / -->
+			<!--<property name="javax.persistence.sharedCache.mode" value="DISABLE_SELECTIVE 
+				"/> <property name = "org.hibernate" value = "true" /> -->
+				<!-- <property name="hibernate.search.default.directory_provider" value="RAM" /> -->
+			 <property name="hibernate.search.default.directory_provider" value="filesystem" />
+			  <property name="hibernate.search.default.indexBase" value="/opt/wildfly-8.2.0.Final/lucene" />
+			   <!-- <property name="hibernate.search.default.indexBase" value="D:\lucene" /> -->
+			   <property name="hibernate.search.indexing_strategy" value="event"/>
+		</properties>
+</persistence-unit>
+</persistence>
